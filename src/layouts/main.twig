@@ -25,7 +25,18 @@
     </header>
     <nav>
         <ul id="menu">
-            <li><a href="#">File</a></li>
+            <li>
+                <a href="#">
+                    <label for="toggleFileMenu">File</label>
+                </a>
+                <input id="toggleFileMenu" type="checkbox" hidden>
+                <ul id="fileMenu">
+                    <li><a href="#">New Chat</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li class="break"></li>
+                    <li><a href="#">Close</a></li>
+                </ul>
+            </li>
             <li><a href="#">Edit</a></li>
             <li><a href="#">Insert</a></li>
             <li><a href="#">People</a></li>
