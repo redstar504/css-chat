@@ -152,7 +152,6 @@ nav span {
 
 #menu a {
     text-decoration: none;
-    color: #000;
     display: block;
 }
 
@@ -188,6 +187,8 @@ nav span {
     padding: 0.25em 1em;
     min-width: 10em;
     white-space: nowrap;
+    text-decoration: none;
+    color: #000;
 }
 
 .contextMenu a:hover {
@@ -208,7 +209,7 @@ nav span {
     list-style: none;
     background: #fff;
     margin: .5em;
-    box-shadow: inset 3px 3px 1px #ccc;
+    box-shadow: inset 3px 3px 1px #bbb;
     font-family: serif;
     height: 10em;
     overflow-y: scroll;
@@ -240,7 +241,7 @@ nav span {
     background: #fff;
     margin: .5em;
     height: 5em;
-    box-shadow: inset 3px 3px 1px #ccc;
+    box-shadow: inset 3px 3px 1px #bbb;
     padding: 0.25em 0.5em;
 }
 
@@ -298,6 +299,7 @@ li#senderTools {
     font-size: .625em;
     color: #333;
     text-decoration: none;
+    line-height: normal;
 }
 
 #footer li span {
