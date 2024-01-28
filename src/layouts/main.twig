@@ -12,14 +12,14 @@
 <body>
 <div id="dialog">
     <header>
-        <h1>Instant Message</h1>
+        <h1><i class="fa-solid fa-comments"></i>Instant Message</h1>
         <ul id="systemActions">
-            <li>
-                <a href="#">_</a>
+            <li id="minimize">
+                <a href="#"></a>
             </li><li>
-                <a href="#">O</a>
+                <a href="#"><i class="fa-regular fa-window-maximize"></i></a>
             </li><li id="exit">
-                <a href="#">X</a>
+                <a href="#"><i class="fa-solid fa-xmark"></i></a>
             </li>
         </ul>
     </header>
@@ -82,42 +82,55 @@
         <textarea></textarea>
     </div>
     <ul id="footer">
-        <li>
-            <a href="#">
-                <span>icon</span>
-                Warn
-            </a>
+        <li id="moderationTools">
+            <ul>
+                <li>
+                    <a href="#" id="warnBuddy">
+                        <i class="fa-solid fa-bolt"></i>
+                        Warn
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="blockBuddy">
+                        <i class="fa-solid fa-user-slash"></i>
+                        Block
+                    </a>
+                </li>
+            </ul>
         </li>
-        <li class="br">
-            <a href="#">
-                <span>icon</span>
-                Block
-            </a>
+        <li id="interactiveTools">
+            <ul>
+                <li>
+                    <a href="#" id="addBuddy">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Add Buddy
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="talk">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        Talk
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="getInfo">
+                        <i class="fa-solid fa-address-card"></i>
+                        Get Info
+                    </a>
+                </li>
+            </ul>
         </li>
-        <li class="bl">
-            <a href="#">
-                <span>icon</span>
-                Add Buddy
-            </a>
-        </li>
-        <li id="talk">
-            <a href="#">
-                <span>icon</span>
-                Talk
-            </a>
-        </li>
-        <li class="br" id="getInfo">
-            <a href="#">
-                <span>icon</span>
-                Get Info
-            </a>
-        </li>
-        <li class="bl">
-            <a href="#">
-                <span>icon</span>
-                Send
-            </a>
+        <li id="senderTools">
+            <ul>
+                <li>
+                    <a href="#" id="sendMessage">
+                        <i class="fa-solid fa-share"></i>
+                        Send
+                    </a>
+                </li>
+            </ul>
         </li>
     </ul>
 </div>
+<script src="https://kit.fontawesome.com/2cf90da1ec.js" crossorigin="anonymous"></script>
 </body>
