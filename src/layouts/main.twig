@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon-32x32.png"/>
-    <meta name="viewport" content="initial-scale=1.0, viewport-fit=cover"/>
+    <meta name="viewport" content="initial-scale=1.25, viewport-fit=cover"/>
     <title>CSS Chat</title>
     {% block stylesheets %}
         <link rel="stylesheet" href="/src/screen.css">
@@ -26,22 +26,47 @@
     <nav>
         <ul id="menu">
             <li>
-                <a href="#">
-                    <label for="toggleFileMenu">File</label>
-                </a>
+                <label for="toggleFileMenu">File</label>
                 <input id="toggleFileMenu" type="checkbox" hidden>
-                <ul id="fileMenu">
+                <ul class="contextMenu">
                     <li><a href="#">New Chat</a></li>
                     <li><a href="#">Settings</a></li>
                     <li class="break"></li>
                     <li><a href="#">Close</a></li>
                 </ul>
             </li>
-            <li><a href="#">Edit</a></li>
-            <li><a href="#">Insert</a></li>
-            <li><a href="#">People</a></li>
+            <li>
+                <label for="toggleEditMenu">Edit</label>
+                <input id="toggleEditMenu" type="checkbox" hidden>
+                <ul class="contextMenu">
+                    <li><a href="#">New Chat</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li class="break"></li>
+                    <li><a href="#">Close</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="toggleInsertMenu">Insert</label>
+                <input id="toggleInsertMenu" type="checkbox" hidden>
+                <ul class="contextMenu">
+                    <li><a href="#">New Chat</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li class="break"></li>
+                    <li><a href="#">Close</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="togglePeopleMenu">People</label>
+                <input id="togglePeopleMenu" type="checkbox" hidden>
+                <ul class="contextMenu">
+                    <li><a href="#">New Chat</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li class="break"></li>
+                    <li><a href="#">Close</a></li>
+                </ul>
+            </li>
         </ul>
-        <span>Sydney's Warning Level: 0%</span>
+        <span>Warning Level: 0%</span>
     </nav>
     <ol id="messages">
         <li><b>Sydney</b>: Greetings from the trenches of adulthood! What's shaking?</li>
@@ -73,22 +98,6 @@
         <li><b>Sydney</b>: Wednesday it is. Until then, keep your taste buds on standby! Sweet dreams, Devin!</li>
         <li><i>Devin</i>: You too, Sydney! May your desserts be ever delightful!</li>
     </ol>
-    {#<ul id="toolbar">
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-    </ul>#}
     <div id="composer">
         <textarea></textarea>
     </div>
@@ -114,7 +123,7 @@
                 <li>
                     <a href="#" id="addBuddy">
                         <i class="fa-solid fa-user-plus"></i>
-                        Add Buddy
+                        Add <span>Buddy</span>
                     </a>
                 </li>
                 <li>
@@ -126,7 +135,7 @@
                 <li>
                     <a href="#" id="getInfo">
                         <i class="fa-solid fa-address-card"></i>
-                        Get Info
+                        <span>Get</span> Info
                     </a>
                 </li>
             </ul>
