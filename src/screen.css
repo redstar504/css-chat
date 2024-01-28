@@ -315,3 +315,9 @@ li#senderTools {
 #interactiveTools a {
     color: #CCC;
 }
+
+@media (min-width: 36em) {
+    #footer li span {
+        display: inline;
+    }
+}
