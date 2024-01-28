@@ -66,6 +66,7 @@ body {
     border-radius: 12px 12px 0 0;
     display: flex;
     flex-direction: column;
+    margin: 0 0.5em;
 }
 
 header {
@@ -109,7 +110,15 @@ nav {
     border-bottom: 1px solid #CCC;
     justify-content: space-between;
     padding: 2px 0.5em;
+    flex-wrap: wrap;
+    align-items: center;
 }
+
+nav span {
+    font-size: 0.75em;
+    color: #555;
+}
+
 
 #menu {
     display: flex;
@@ -219,4 +228,14 @@ nav {
 
 #footer .bl {
     border-left: 2px solid #fff;
+}
+
+#talk, #getInfo {
+    display: none;
+}
+
+@media(min-width: 800px) {
+    #talk, #getInfo {
+        display: block;
+    }
 }
