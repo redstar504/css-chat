@@ -10,44 +10,114 @@
     {% endblock stylesheets %}
 </head>
 <body>
-<h1>SydneyAWeb : DevinJacks - Instant Message</h1>
-<ul id="menu">
-    <li>File</li>
-    <li>Edit</li>
-    <li>Insert</li>
-    <li>People</li>
-</ul>
-<span>SydneyAWeb's Warning Level</span>
-<ol>
-    <li><b>Sydney:</b> Hi, you there?</li>
-    <li><i>Devin:</i> Want to meet later?</li>
-    <li><b>Sydney:</b> Sure, what time?</li>
-    <li><i>Devin:</i> 9:00?</li>
-    <li><b>Sydney:</b> Sounds good. See you then.</li>
-</ol>
-<ul id="toolbar">
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
-</ul>
-<textarea></textarea>
-<ul id="footer">
-    <li>Warn</li>
-    <li>Block</li>
-    <li>Expressions</li>
-    <li>Games</li>
-    <li>Talk</li>
-    <li>Send</li>
-</ul>
+<div id="dialog">
+    <header>
+        <h1>Sydney : Devin - Instant Message</h1>
+        <ul id="systemActions">
+            <li>
+                <a href="#">_</a>
+            </li><li>
+                <a href="#">O</a>
+            </li><li id="exit">
+                <a href="#">X</a>
+            </li>
+        </ul>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li><a href="#">File</a></li>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">Insert</a></li>
+            <li><a href="#">People</a></li>
+        </ul>
+        <span>Sydney's Warning Level: 0%</span>
+    </nav>
+    <ol id="messages">
+        <li><b>Sydney</b>: Greetings from the trenches of adulthood! What's shaking?</li>
+        <li><i><i>Devin</i></i>: Just dodging responsibility like a pro. You?</li>
+        <li><b>Sydney</b>: Same here, doing the cha-cha with deadlines. Want to pirouette out of this routine later?</li>
+        <li><i>Devin</i>: Absolutely! Let's do dinner at the "Don't-Burn-the-House-Down" Bistro. You up for the challenge?</li>
+        <li><b>Sydney</b>: Ha! Bring it on. What time should we juggle flaming spatulas?</li>
+        <li><i>Devin</i>: 7:00? Gives us enough time to rehearse our emergency exit strategies.</li>
+        <li><b>Sydney</b>: Perfect. I'll wear my fire-resistant cape. See you there!</li>
+        <li class="break"></li>
+        <li><b>Sydney</b>: Devin, I'm en route to the Bistro. Flame-resistant attire intact. You already battling the culinary dragons?</li>
+        <li><i>Devin</i>: On my way, armed with a spatula and a fire extinguisher. Reserve us a table near the emergency exit!</li>
+        <li><b>Sydney</b>: Roger that, Captain Culinary. See you soon!</li>
+        <li class="break"></li>
+        <li><i>Devin</i>: Made it! Ready for this gastronomic tightrope walk?</li>
+        <li><b>Sydney</b>: Born ready. Let's see if the chef can pull off the culinary high-wire act!</li>
+        <li class="break"></li>
+        <li><i>Devin</i>: We survived the kitchen acrobatics. That was a culinary circus!</li>
+        <li><b>Sydney</b>: I feel like we just performed a magic show with our taste buds. What's next, dessert or a trapeze act?</li>
+        <li><i>Devin</i>: Dessert, definitely. We'll save the trapeze for our next dining adventure. Lead the way!</li>
+        <li class="break"></li>
+        <li><b>Sydney</b>: This place is the sweetest spot in town. What's your dessert spirit animal?</li>
+        <li><i>Devin</i>: I'm a chocolate ninja. Stealthy and irresistible. You?</li>
+        <li><b>Sydney</b>: I'm a dessert archaeologist. I dig through layers of sweetness to find hidden treasures. Find us a table for two, Indiana Jones style!</li>
+        <li class="break"></li>
+        <li><i>Devin</i>: Time flew by faster than a sugar rush. That was dessert-licious!</li>
+        <li><b>Sydney</b>: Agreed! We should write a Yelp review for our taste bud journey. How about a sequel next week?</li>
+        <li><i>Devin</i>: "The Sweet Escape: Return of the Dessert Devotees." Wednesday?</li>
+        <li><b>Sydney</b>: Wednesday it is. Until then, keep your taste buds on standby! Sweet dreams, Devin!</li>
+        <li><i>Devin</i>: You too, Sydney! May your desserts be ever delightful!</li>
+    </ol>
+    {#<ul id="toolbar">
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+    </ul>#}
+    <div id="composer">
+        <textarea></textarea>
+    </div>
+    <ul id="footer">
+        <li>
+            <a href="#">
+                <span>icon</span>
+                Warn
+            </a>
+        </li>
+        <li class="br">
+            <a href="#">
+                <span>icon</span>
+                Block
+            </a>
+        </li>
+        <li class="bl">
+            <a href="#">
+                <span>icon</span>
+                Add Buddy
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>icon</span>
+                Talk
+            </a>
+        </li>
+        <li class="br">
+            <a href="#">
+                <span>icon</span>
+                Get Info
+            </a>
+        </li>
+        <li class="bl">
+            <a href="#">
+                <span>icon</span>
+                Send
+            </a>
+        </li>
+    </ul>
+</div>
 </body>
