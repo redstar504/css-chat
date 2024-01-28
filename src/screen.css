@@ -132,6 +132,7 @@ nav {
     padding: 2px 0.5em;
     flex-wrap: wrap;
     align-items: center;
+    row-gap: .25em;
 }
 
 nav span {
