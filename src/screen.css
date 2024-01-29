@@ -50,8 +50,7 @@ html, body {
 }
 
 body {
-    background: #0066dd url(assets/background.jpg);
-    background-size: cover;
+    background: #000;
     font: 400 1em/1.5 arial, sans-serif;
 }
 
@@ -324,6 +323,12 @@ li#senderTools {
 }
 
 @media (min-width: 36em) {
+    body {
+        background-color: #0066dd;
+        background-image: url(assets/background.jpg);
+        background-size: cover;
+    }
+
     #chatWindow #footer li span {
         display: inline;
     }
