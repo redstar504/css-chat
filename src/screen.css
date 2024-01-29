@@ -52,10 +52,14 @@ html, body {
 body {
     background: #0066dd url(assets/background.jpg);
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font: 400 1em/1.5 arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
 }
 
 .window {
@@ -64,14 +68,7 @@ body {
     border-radius: .75em .75em 0 0;
     display: flex;
     flex-direction: column;
-    margin: 0 0.5em;
-    min-width: 10em;
-    min-height: 10em;
-}
-
-#chatWindow {
-    width: 36em;
-    height: 29em;
+    min-height: 100%;
 }
 
 header {
@@ -329,5 +326,28 @@ li#senderTools {
 @media (min-width: 36em) {
     #chatWindow #footer li span {
         display: inline;
+    }
+
+    #signOnWindow {
+        max-width: 20em;
+    }
+
+    #friendWindow {
+        max-width: 20em;
+    }
+
+    #chatWindow {
+        max-width: 36em;
+    }
+
+    .window {
+        align-self: center;
+        width: 100%;
+        min-height: auto;
+        margin-bottom: 2.75em;
+    }
+
+    #taskbar {
+        display: flex;
     }
 }

@@ -1,5 +1,6 @@
 #friendWindow {
-    width: 20em;
+    display: flex;
+    flex-direction: column;
 }
 
 #systemMessage {
@@ -54,8 +55,8 @@
 #friendList {
     background: #fff;
     padding: .5em;
-    max-height: 9em;
-    overflow: scroll;
+    overflow-y: scroll;
+    flex-grow: 1;
 }
 
 #friendList a {

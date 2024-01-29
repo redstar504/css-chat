@@ -6,35 +6,37 @@
     <meta name="viewport" content="initial-scale=1.25, viewport-fit=cover"/>
     <title>CSS Chat</title>
     {% block stylesheets %}
-        <link rel="stylesheet" href="/src/screen.css">
         <link rel="stylesheet" href="/src/taskbar.css">
+        <link rel="stylesheet" href="/src/screen.css">
     {% endblock stylesheets %}
 </head>
 <body>
-{% block content %}{% endblock %}
-<ul id="taskbar">
-    <li id="genesis">
-        <i class="fa-solid fa-cat"></i>
-        css.im
-    </li>
-    <li>
-        <label for="signOnWindowToggle" class="active" onclick="window.location = '/index'">
-            <i class="fa-solid fa-arrow-right-to-bracket"></i>
-            Sign On
-        </label>
-    </li>
-    <li>
-        <label for="signOnWindowToggle" class="active" onclick="window.location = '/im'">
-            <i class="fa-solid fa-comments"></i>
-            Sydney
-        </label>
-    </li>
-    <li>
-        <label for="signOnWindowToggle" class="active" onclick="window.location = '/friends'">
-            <i class="fa-solid fa-user-group"></i>
-            Buddy List
-        </label>
-    </li>
-</ul>
+<div id="container">
+    {% block content %}{% endblock %}
+    <ul id="taskbar">
+        <li id="genesis">
+            <i class="fa-solid fa-cat"></i>
+            css.im
+        </li>
+        <li>
+            <label for="signOnWindowToggle" onclick="window.location = '/index'">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                Sign On
+            </label>
+        </li>
+        <li>
+            <label for="signOnWindowToggle" onclick="window.location = '/im'">
+                <i class="fa-solid fa-comments"></i>
+                Sydney
+            </label>
+        </li>
+        <li>
+            <label for="signOnWindowToggle" onclick="window.location = '/friends'">
+                <i class="fa-solid fa-user-group"></i>
+                Buddy List
+            </label>
+        </li>
+    </ul>
+</div>
 <script src="https://kit.fontawesome.com/2cf90da1ec.js" crossorigin="anonymous"></script>
 </body>
