@@ -58,15 +58,20 @@ body {
     font: 400 1em/1.5 arial, sans-serif;
 }
 
-#dialog {
-    width: 36em;
-    height: 29em;
+.window {
     background: #EDEAD9;
     border: .25rem solid #011B9D;
     border-radius: .75em .75em 0 0;
     display: flex;
     flex-direction: column;
     margin: 0 0.5em;
+    min-width: 10em;
+    min-height: 10em;
+}
+
+#chatWindow {
+    width: 36em;
+    height: 29em;
 }
 
 header {
@@ -119,6 +124,10 @@ h1 i {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+#systemActions .disabled a {
+    opacity: 0.5;
 }
 
 #systemActions #minimize a::before {
@@ -257,7 +266,7 @@ nav span {
     margin: 0;
 }
 
-#footer {
+#chatWindow #footer {
     display: flex;
     margin: .5em;
     border: 2px solid #cfcfcf;
@@ -265,7 +274,7 @@ nav span {
     font-weight: bold;
 }
 
-#footer li {
+#chatWindow #footer li {
     flex-grow: 1;
 }
 
@@ -281,7 +290,7 @@ li#senderTools {
     flex-grow: 1;
 }
 
-#footer ul {
+#chatWindow #footer ul {
     display: flex;
     border-left: 1px solid #fff;
     border-right: 2px solid #cfcfcf;
@@ -292,7 +301,7 @@ li#senderTools {
     border-right: none;
 }
 
-#footer li a {
+#chatWindow #footer li a {
     display: block;
     padding: 1em;
     text-align: center;
@@ -302,11 +311,11 @@ li#senderTools {
     line-height: normal;
 }
 
-#footer li span {
+#chatWindow #footer li span {
     display: none;
 }
 
-#footer li i {
+#chatWindow #footer li i {
     font-size: 2em;
     display: block;
     margin: 0 auto .25rem;
@@ -317,7 +326,7 @@ li#senderTools {
 }
 
 @media (min-width: 36em) {
-    #footer li span {
+    #chatWindow #footer li span {
         display: inline;
     }
 }
