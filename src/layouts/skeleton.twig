@@ -7,6 +7,7 @@
     <title>CSS Chat</title>
     {% block stylesheets %}
         <link rel="stylesheet" href="/src/screen.css">
+        <link rel="stylesheet" href="/src/taskbar.css">
     {% endblock stylesheets %}
 </head>
 <body>
@@ -17,9 +18,21 @@
         css.im
     </li>
     <li>
-        <label for="signOnWindowToggle" class="active">
+        <label for="signOnWindowToggle" class="active" onclick="window.location = '/index'">
             <i class="fa-solid fa-arrow-right-to-bracket"></i>
             Sign On
+        </label>
+    </li>
+    <li>
+        <label for="signOnWindowToggle" class="active" onclick="window.location = '/im'">
+            <i class="fa-solid fa-comments"></i>
+            Sydney
+        </label>
+    </li>
+    <li>
+        <label for="signOnWindowToggle" class="active" onclick="window.location = '/friends'">
+            <i class="fa-solid fa-user-group"></i>
+            Buddy List
         </label>
     </li>
 </ul>

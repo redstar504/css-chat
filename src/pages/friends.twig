@@ -1,0 +1,140 @@
+{% extends 'layouts/skeleton.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/src/friends.css">
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="window" id="friendWindow">
+    <header>
+        <h1><i class="fa-solid fa-user-group"></i>Buddy List</h1>
+        <ul id="systemActions">
+            <li id="minimize">
+                <a href="#"></a>
+            </li><li>
+                <a href="#"><i class="fa-regular fa-window-maximize"></i></a>
+            </li><li id="exit">
+                <a href="#"><i class="fa-solid fa-xmark"></i></a>
+            </li>
+        </ul>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li>
+                <label for="toggleFileMenu">My Account</label>
+                <input id="toggleFileMenu" type="checkbox" hidden>
+                <ul class="contextMenu">
+                    <li><a href="#">New Chat</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li class="break"></li>
+                    <li><a href="#">Close</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="toggleEditMenu">People</label>
+                <input id="toggleEditMenu" type="checkbox" hidden>
+                <ul class="contextMenu">
+                    <li><a href="#">Cut</a></li>
+                    <li><a href="#">Paste</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="systemMessage">
+        <i class="fa-solid fa-cat"></i>
+        <div id="motd">
+            <h2>CSS Instant Messenger</h2>
+            Welcome to the new-old chat!
+        </div>
+    </div>
+
+    <h2 id="listHeading">
+        <i class="fa-regular fa-eye"></i>
+        Devin's Buddy List
+    </h2>
+
+    <ol id="friendList">
+        <li>
+            <input type="checkbox" id="toggleChatBots" hidden>
+            <h3>
+                <label for="toggleChatBots">
+                    <a>Chat Bots</a>
+                </label>
+            </h3>
+        </li>
+        <li>
+            <input type="checkbox" id="toggleBuddies" hidden checked>
+            <h3>
+                <label for="toggleBuddies">
+                    <a>Buddies</a>
+                </label>
+            </h3>
+            <ol>
+                <li>
+                    <a href="#">Carol</a>
+                </li>
+                <li>
+                    <a href="#">Jason</a>
+                </li>
+                <li>
+                    <a href="#">Sydney</a>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <input type="checkbox" id="toggleRecentBuddies" hidden>
+            <h3>
+                <label for="toggleRecentBuddies">
+                    <a>Recent Buddies</a>
+                </label>
+            </h3>
+        </li>
+        <li id="offlineFriends">
+            <input type="checkbox" id="toggleOfflineFriends" hidden checked>
+            <h3>
+                <label for="toggleOfflineFriends">
+                    <a>Offline</a>
+                </label>
+            </h3>
+            <ol>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ol>
+        </li>
+    </ol>
+    <ul id="footer">
+       <li>
+           <a href="/im">
+               <i class="fa-solid fa-comment"></i>
+               IM
+           </a>
+       </li>
+       <li>
+           <a href="#">
+               <i class="fa-solid fa-comments"></i>
+               Chat
+           </a>
+       </li>
+       <li>
+           <a href="#">
+               <i class="fa-solid fa-address-card"></i>
+               Info
+           </a>
+       </li>
+       <li>
+           <a href="#">
+               <i class="fa-solid fa-paper-plane"></i>
+               Away
+           </a>
+       </li>
+       <li>
+           <a href="#">
+               <i class="fa-solid fa-sliders"></i>
+               Setup
+           </a>
+       </li>
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,124 @@
+#friendWindow {
+    width: 20em;
+}
+
+#systemMessage {
+    background: #FFF;
+    height: 8em;
+    position: relative;
+}
+
+#systemMessage i {
+    font-size: 5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.1;
+}
+
+#motd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#motd h2 {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#listHeading {
+    margin: 0.25em 0.5em;
+    font-size: .875em;
+    display: flex;
+    column-gap: 0.5em;
+    align-items: center;
+}
+
+#friendWindow ol {
+    list-style: none;
+}
+
+#friendList {
+    background: #fff;
+    padding: .5em;
+    max-height: 9em;
+    overflow: scroll;
+}
+
+#friendList a {
+    text-decoration: none;
+    color: #000;
+}
+
+#friendList ol {
+    margin-left: 2em;
+    display: none;
+}
+
+#friendList h3 a {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    font-size: .875em;
+    align-items: center;
+}
+
+#friendList li h3 a::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url(assets/arrow_right.svg) center left no-repeat;
+    background-size: 12px;
+    display: block;
+}
+
+#friendList input:checked ~ ol {
+    display: block;
+}
+
+#friendList input:checked ~ h3 a::before {
+    background: url(assets/arrow_down.svg) center left no-repeat;
+}
+
+#offlineFriends {
+    font-style: italic;
+    color: #888;
+}
+
+#offlineFriends h3 a {
+    color: #888;
+}
+
+#friendWindow #footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    column-gap: 1.25em;
+    padding: 0.75em 0 0.5em;
+}
+
+#friendWindow #footer a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.75em;
+    display: block;
+}
+
+#friendWindow #footer i {
+    display: block;
+    font-size: 1.625em;
+    margin-bottom: .125em;
+}
