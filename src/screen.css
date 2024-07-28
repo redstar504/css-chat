@@ -345,6 +345,10 @@ li#senderTools {
         max-width: 36em;
     }
 
+    #errorWindow {
+        max-width: 20em;
+    }
+
     .window {
         align-self: center;
         width: 100%;
